@@ -1,0 +1,17 @@
+---
+- name: Template
+  template:
+    src: manifest.yml.j2
+    dest: roles/helloapp/files/sample-api/manifest_{{ index }}.yml  
+      
+- name: Push application
+  command: cf push 
+  environment:
+    PCF_APPHOST: hello-{{ index }}
+  args:
+    chdir: roles/helloapp/files/sample-api
+
+- name: Delete manifest
+  file:
+    path: roles/helloapp/files/sample-api/manifest_{{ index }}.yml
+    state: absent

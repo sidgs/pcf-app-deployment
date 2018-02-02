@@ -1,0 +1,9 @@
+---
+- name: Include push task
+  include: push.yml
+  with_items:
+    - 1
+    - 2
+    - 3
+  loop_control:
+    loop_var: index

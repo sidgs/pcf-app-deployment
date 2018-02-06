@@ -1,6 +1,6 @@
 ## Clone the repo
 ```
-$ git clone https://github.com/maurogonzalez/pcf-app-deployment.git
+$ git clone https://github.com/sidgs/pcf-app-deployment.git
 ```
 ## Add PCF environment variables
 ```
@@ -14,8 +14,22 @@ export APIGEE_ENV=xxx
 
 ## Login PCF
 ```
-$ cf login $PCF_DOMAIN --skip-ssl-validation
+$ cf api https://api.system.apigee-cf.com --skip-ssl-validation
+$ cf login 
 ```
+
+## Validate  apigee service plan 'org'  
+```
+$ cf marketplace
+$ cf service 
+```
+
+if plan 'org' is not persent add plan
+```
+$ cf create-service apigee-edge org org -c '{"env":"prod","org":"tech-brief"}'
+```
+
+
 
 ## Create multiple nodeJS apps
 ```

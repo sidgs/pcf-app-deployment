@@ -1,11 +1,11 @@
 {
-    "org":"{{ apigee.org }}",
-    "env":"{{ apigee.env }}",
+    "org":"tech-brief",
+    "env":"prod",
     "action":"bind",
-    "protocol":"{{ http.protocol }}",
+    "protocol":"https",
     "bind_resource": {
-        "route": "{{ nodejshello }}.{{ apps.apigee-cf.com }}" 
+        "route": "hello-{{ item }}.apps.apigee-cf.com" 
         },
-    "user" : "{{ apigee.user }}",
-    "pass": "{{ apigee.password }}"
+    "user" : "opdk@apigee.com",
+    "pass": "Secret123"
 }

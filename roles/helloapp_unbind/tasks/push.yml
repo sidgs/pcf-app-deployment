@@ -1,6 +1,6 @@
 ---      
-- name: UnBind application 
+- name: UnBind application - {{ item }}
   command:  cf unbind-route-service apps.apigee-cf.com org --hostname app-{{ item }} 
   
-- name: Remove application
+- name: Remove application - {{ item }}
   command: cf delete app-{{ item }} -f 

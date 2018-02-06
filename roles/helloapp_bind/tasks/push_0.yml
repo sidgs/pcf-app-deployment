@@ -1,0 +1,32 @@
+---
+- name: Template 1
+  template:
+    src: manifest.yml.j2
+    dest: roles/helloapp_bind/files/sample-api/manifest.yml  
+
+- name: Template 2
+  template:
+    src: bind-cmd.json.0.j2
+    dest: roles/helloapp_bind/files/sample-api/bind-cmd.json  
+      
+- name: Push application - {{ item }}
+  command: cf push
+  environment:
+    PCF_APPHOST: app-{{ item }}
+  args:
+    chdir: roles/helloapp_bind/files/sample-api  
+
+- name: Bind application - {{ item }}
+  command:  cf bind-route-service apps.apigee-cf.com org --hostname app-{{ item }} -c bind-cmd.json
+  args:
+    chdir: roles/helloapp_bind/files/sample-api 
+
+- name: Delete manifest 1
+  file:
+    path: roles/helloapp_bind/files/sample-api/manifest.yml
+    state: absent
+
+- name: Delete manifest 2
+  file:
+    path: roles/helloapp_bind/files/sample-api/bind-cmd.json
+    state: absent

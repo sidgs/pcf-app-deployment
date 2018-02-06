@@ -1,7 +1,7 @@
 ---
 - name: Template 1
   template:
-    src: manifest.yml.j2
+    src: manifest.yml.0.j2
     dest: roles/helloapp_bind/files/sample-api/manifest.yml  
 
 - name: Template 2

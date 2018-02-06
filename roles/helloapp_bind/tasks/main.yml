@@ -1,6 +1,7 @@
 ---
 - name: Include push task
   include: push_0.yml
+  
 - name: Include push task
   include: push.yml
   with_sequence: start=1 end={{ apps_count }}

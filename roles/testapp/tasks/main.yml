@@ -1,4 +1,5 @@
 ---
+
 - debug:
     msg: "{{ item }}"
-with_sequence: start=0 end=32
+    with_sequence: start=0 end=32

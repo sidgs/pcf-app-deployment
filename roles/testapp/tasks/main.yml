@@ -1,4 +1,4 @@
 ---
 - debug:
     msg: hello-{{ item }}
-  with_sequence: start=0 end={{ countOfInstaces }}
+  with_sequence: start=1 end={{ apps.count }}

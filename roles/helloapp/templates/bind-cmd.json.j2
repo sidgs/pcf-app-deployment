@@ -1,0 +1,11 @@
+{
+    "org":"{{ apigee.org }}",
+    "env":"{{ apigee.env }}",
+    "action":"bind",
+    "protocol":"{{ http.protocol }}",
+    "bind_resource": {
+        "route": "{{ nodejshello }}.{{ apps.apigee-cf.com }}" 
+        },
+    "user" : "{{ apigee.user }}",
+    "pass": "{{ apigee.password }}"
+}

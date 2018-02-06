@@ -4,7 +4,7 @@
     "action":"bind",
     "protocol":"https",
     "bind_resource": {
-        "route": "hello-{{ item }}.apps.apigee-cf.com" 
+        "route": "{{ app_name }}-{{ item }}.apps.apigee-cf.com" 
         },
     "user" : "{{ apigee_user }}",
     "pass": "{{ apigee_password }}"

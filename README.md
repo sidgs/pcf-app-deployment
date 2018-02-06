@@ -33,10 +33,10 @@ $ cf create-service apigee-edge org org -c '{"env":"prod","org":"tech-brief"}'
 
 ## Create multiple (500) nodeJS apps
 ```
-$ ansible-playbook helloapp_bind.yml --extra-vars "apps_count=500 apigee_user=xxxx apigee_password=xxxxx"
+$ ansible-playbook helloapp_bind.yml --extra-vars "app_name=demo apps_count=500 apigee_user=xxxx apigee_password=xxxxx"
 ```
 
 ## Remove multiple (500) nodeJS apps
 ```
-$ ansible-playbook helloapp_unbind.yml --extra-vars "apps_count=500 "
+$ ansible-playbook helloapp_unbind.yml --extra-vars "app_name=demo apps_count=500 "
 ```

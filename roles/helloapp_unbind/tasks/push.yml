@@ -3,4 +3,4 @@
   command:  cf unbind-route-service apps.apigee-cf.com org --hostname hello-{{ item }} 
   
 - name: Remove application
-  command: cf delete hello-{{ item }} -f -r 
+  command: cf delete hello-{{ item }} -f 

@@ -9,15 +9,15 @@
     src: bind-cmd.json.0.j2
     dest: roles/helloapp_bind/files/sample-api/bind-cmd.json  
       
-- name: Push application - {{ item }}
+- name: Push application - 0
   command: cf push
   environment:
-    PCF_APPHOST: app-{{ item }}
+    PCF_APPHOST: app-0
   args:
     chdir: roles/helloapp_bind/files/sample-api  
 
-- name: Bind application - {{ item }}
-  command:  cf bind-route-service apps.apigee-cf.com org --hostname app-{{ item }} -c bind-cmd.json
+- name: Bind application - 0
+  command:  cf bind-route-service apps.apigee-cf.com org --hostname app-0 -c bind-cmd.json
   args:
     chdir: roles/helloapp_bind/files/sample-api 
 

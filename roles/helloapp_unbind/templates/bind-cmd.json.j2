@@ -1,0 +1,11 @@
+{
+    "org":"tech-brief",
+    "env":"prod",
+    "action":"bind",
+    "protocol":"https",
+    "bind_resource": {
+        "route": "hello-{{ item }}.apps.apigee-cf.com" 
+        },
+    "user" : "opdk@apigee.com",
+    "pass": "Secret123"
+}

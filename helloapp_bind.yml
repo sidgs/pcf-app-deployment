@@ -1,0 +1,4 @@
+---
+- hosts: localhost
+  roles:
+    - helloapp_bind

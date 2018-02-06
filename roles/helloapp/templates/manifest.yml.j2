@@ -1,8 +1,0 @@
----
-applications:
-- name: hello-{{ item }}
-  memory: 128M
-  instances: 1
-  host: hello-{{ item }}
-  path: .
-  buildpack: nodejs_buildpack

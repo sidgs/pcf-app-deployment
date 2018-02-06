@@ -1,4 +1,6 @@
 ---
 - debug:
-    msg: "hello-{{ item }}"
+    msg: "hello-{{ index }}"
   with_sequence: start=0 end=32
+  loop-control:
+    loop_var: index

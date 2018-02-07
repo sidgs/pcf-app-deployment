@@ -10,10 +10,12 @@
     dest: roles/helloapp_bind/files/sample-api/bind-cmd.json  
 
 - name: display multiple file contents
-  debug: var=item
+  debug: var=file_name
   with_file:
+    - "roles/helloapp_bind/files/sample-api/manifest.yml"
     - "roles/helloapp_bind/files/sample-api/bind-cmd.json"
-      
+  loop_control: 
+    loop_var: "file_name"    
 - name: Push application - {{ item }}
   command: cf push
   environment:

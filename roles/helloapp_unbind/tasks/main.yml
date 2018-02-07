@@ -1,7 +1,7 @@
 ---
 - name: Remove CF App 
   include: push.yml
-  with_sequence: start={{ start_index }} end= {{ end_index }}
+  with_sequence: start={{ start_index }} end={{ end_index }}
 - name: Remove Edge Proxy  
   include: delete_proxy.yml
-  with_sequence: start={{ start_index }} end= {{ end_index }}  
+  with_sequence: start={{ start_index }} end={{ end_index }}  

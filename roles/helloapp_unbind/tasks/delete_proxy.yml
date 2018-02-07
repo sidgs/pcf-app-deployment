@@ -1,7 +1,7 @@
 ---
 - name : Undeploy proxy {{ appName }} - {{ item }}
   uri :
-    url :"{{api_server}}/v1/organizations/{{apigee_org}}/environments/{{apigee_env}}/apis/cf-{{ appName }}-{{ item }}.{{ cfDomain }}/revisions/{{proxy_version}}/deployments"
+    url : "{{ api_server }}/v1/organizations/{{ apigee_org }}/environments/{{apigee_env}}/apis/cf-{{ appName }}-{{ item }}.{{ cfDomain }}/revisions/{{ proxy_version }}/deployments"
     method : "DELETE"
     user : " {{ apigee_user }} "
     password : "{{ apigee_password }}"
@@ -10,7 +10,7 @@
 
 - name : Delete proxy {{ appName }} - {{ item }}
   uri :
-    url : "{{api_server}}/v1/organizations/{{apigee_org}}/apis/cf-{{ appName }}-{{ item }}.{{ cfDomain }}
+    url : "{{ api_server }}/v1/organizations/{{ apigee_org }}/apis/cf-{{ appName }}-{{ item }}.{{ cfDomain }}"
     method : "DELETE"
     user : " {{ apigee_user }} "
     password : "{{ apigee_password }}"

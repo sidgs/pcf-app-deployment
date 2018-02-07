@@ -1,0 +1,5 @@
+---
+apigee_org : "tech-brief"
+apigee_env : "prod"
+apigee_bind : "proxy bind"
+protocol_http : "https"

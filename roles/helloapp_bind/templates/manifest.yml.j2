@@ -1,8 +1,8 @@
 ---
 applications:
-- name: app-{{ item }}
+- name: "{{ appName }}-{{ item }}"
   memory: 128M
   instances: 1
-  host: app-{{ item }}
+  host: "{{ appName }}-{{ item }}"
   path: .
   buildpack: nodejs_buildpack

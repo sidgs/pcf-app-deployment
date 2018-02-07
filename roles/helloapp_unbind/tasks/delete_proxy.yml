@@ -1,6 +1,8 @@
 ---
-- name : Undeploy proxy {{ appName }} - {{ item }}
+-name : Print command to Undeploy Proxy 
   debug: msg  = "{{ api_server }}/v1/organizations/{{ apigee_org }}/environments/{{apigee_env}}/apis/cf-{{ appName }}-{{ item }}.{{ cfDomain }}/revisions/{{ proxy_version }}/deployments"
+
+- name : Undeploy proxy {{ appName }} - {{ item }}
   uri :
     url : "{{ api_server }}/v1/organizations/{{ apigee_org }}/environments/{{apigee_env}}/apis/cf-{{ appName }}-{{ item }}.{{ cfDomain }}/revisions/{{ proxy_version }}/deployments"
     method : "DELETE"

@@ -12,14 +12,14 @@
     url : "{{ mgmt_api_uri }}/organizations/{{ apigee_org }}/environments/{{apigee_env}}/apis/cf-{{ appName }}-{{ item }}.{{ cfDomain }}/revisions/{{ proxy_version }}/deployments"
     method : "DELETE"
     HEADER_Authorization : "Basic b3Bka0BhcGlnZWUuY29tOlNlY3JldDEyMw=="
-    status_code : 200,404
+    status_code : 200,404,400
 
 - name : Delete proxy {{ appName }} - {{ item }}
   uri :
     url : "{{ mgmt_api_uri }}/organizations/{{ apigee_org }}/apis/cf-{{ appName }}-{{ item }}.{{ cfDomain }}"
     method : "DELETE"
     HEADER_Authorization : "Basic b3Bka0BhcGlnZWUuY29tOlNlY3JldDEyMw=="
-    status_code : 404,200,201,202
+    status_code : 404,400,200,201,202
 
 
 

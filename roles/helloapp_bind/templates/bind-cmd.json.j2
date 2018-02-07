@@ -1,8 +1,8 @@
 {
     "org":"{{ apigee_org }}",
     "env":"{{ apigee_env }}",
-    "action":"{{ apigee_bind }}",
-    "protocol":"{{ protocol_http }}",
+    "action":"proxy bind",
+    "protocol":"https",
     "bind_resource": {
         "route":"{{ appName }}-{{ item }}.apps.apigee-cf.com" 
         },

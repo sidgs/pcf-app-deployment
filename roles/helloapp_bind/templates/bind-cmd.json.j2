@@ -1,11 +1,11 @@
 {
-    "org": "{{ apigee_org }}",
-    "env": "{{ apigee_env }}",
-    "action": "{{ apigee_bind }}",
-    "protocol": "{{ protocol_http }}",
+    "org":"{{ apigee_org }}",
+    "env":"{{ apigee_env }}",
+    "action":"{{ apigee_bind }}",
+    "protocol":"{{ protocol_http }}",
     "bind_resource": {
-        "route": "{{ appName }}-{{ item }}.apps.apigee-cf.com" 
+        "route":"{{ appName }}-{{ item }}.apps.apigee-cf.com" 
         },
-    "user" : "{{ apigee_user }}",
-    "pass": "{{ apigee_password }}"
+    "user":"{{ apigee_user }}",
+    "pass":"{{ apigee_password }}"
 }

@@ -8,7 +8,9 @@
   template:
     src: bind-cmd.json.j2
     dest: roles/helloapp_bind/files/sample-api/bind-cmd.json  
-  debug: msg="{{lookup('file', 'roles/helloapp_bind/files/sample-api/bind-cmd.json') }}"
+
+- name : DEBUG     
+  debug: msg= {{ lookup('file', 'roles/helloapp_bind/files/sample-api/bind-cmd.json') }}
 
       
 - name: Push application - {{ item }}

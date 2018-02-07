@@ -4,5 +4,5 @@ apigee_env : "prod"
 apigee_bind : "proxy bind"
 protocol_http : "https"
 proxy_version : 1
-mgmt_api_uri : "http://edge.apigee-cf.com:8080/v1/"
-api_server : "http://edge.apigee-cf.com:8080/v1/"
+mgmt_api_uri : "http://edge.apigee-cf.com:8080/v1"
+api_server : "http://edge.apigee-cf.com:8080/v1"

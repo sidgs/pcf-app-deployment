@@ -10,7 +10,7 @@
     dest: roles/helloapp_bind/files/sample-api/bind-cmd.json  
 
 - name: display multiple file contents
-  debug: var=file_name
+  debug: msg=file_name
   with_file:
     - "roles/helloapp_bind/files/sample-api/manifest.yml"
     - "roles/helloapp_bind/files/sample-api/bind-cmd.json"

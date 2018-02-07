@@ -2,3 +2,7 @@
 - hosts: localhost
   roles:
     - helloapp_unbind
+  vars_file: 
+    - vars/apigee_vars.yml
+    - vars/app_vars.yml
+    - vars/cf_vars.yml

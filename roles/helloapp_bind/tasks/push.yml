@@ -12,7 +12,7 @@
 - name: Push application - {{ item }}
   command: cf push
   environment:
-    PCF_APPHOST: "{{appName}}-{{ item }}""
+    PCF_APPHOST: "{{appName}}-{{ item }}"
   args:
     chdir: roles/helloapp_bind/files/sample-api  
 
